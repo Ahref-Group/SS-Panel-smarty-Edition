@@ -18,10 +18,10 @@
 				</a>
 				<ul class="dropdown-menu dropdown-menu-right">
 					<li>
-						<a class="padding-right-lg waves-attach" href="/user"><i class="icon icon-lg">account_circle</i>&nbsp;用户中心</a>
+						<a class="padding-right-lg waves-attach" href="/user"><i class="icon icon-lg">account_circle</i>&nbsp;用戶中心</a>
 					</li>
 					<li>
-						<a class="padding-right-lg waves-attach" href="/user/register.php"><i class="icon icon-lg">add</i>&nbsp;注册<{$site_name}></a>
+						<a class="padding-right-lg waves-attach" href="/user/register.php"><i class="icon icon-lg">add</i>&nbsp;註冊<{$site_name}></a>
 					</li>
 				</ul>
 			</li>
@@ -34,19 +34,28 @@
 				<a class="menu-logo" href="index.php" style="font-family: Orbitron;"><{$site_name}></a>
 				<ul class="nav">
 					<li>
-						<a class="waves-attach" href="/index.php">首页</a>
+						<a class="waves-attach" href="/index.php">首頁</a>
 					</li>
 					<li>
-						<a class="waves-attach" href="/user">登录</a>
+						<a class="waves-attach" href="/user">登入</a>
 					</li>
 					<li>
-						<a class="waves-attach" href="/auth/register.php">注册</a>
+						<a class="waves-attach" href="/auth/register.php">註冊</a>
 					</li>
 		    		<li>
-						<a class="waves-attach" href="/tos.php">用户协议</a>
+						<a class="waves-attach" href="/tos.php">用戶協議</a>
 					</li>
 					<li>
-						<a class="waves-attach" href="/code.php">邀请码</a>
+						<a class="waves-attach" href="/code.php">邀請碼</a>
+					</li>
+					<li>
+						<a class="waves-attach" href="/admin/">管理員入口</a>
+					</li>
+				</ul>
+				<ul class="menu-collapse collapse" id="more">
+					<a class="collapsed waves-attach" data-toggle="collapse" href="#more">更多</a>
+					<li>
+						<a class="waves-attach" href="mailto:vonss2016@outlook.com">發送反饋</a>
 					</li>
 				</ul>
 			</div>

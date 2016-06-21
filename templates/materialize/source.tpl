@@ -2,7 +2,6 @@
 <link href="<{$resources_dir}>/css/base.css" rel="stylesheet">
 <link href="<{$resources_dir}>/css/project.min.css" rel="stylesheet">
 <link href="<{$resources_dir}>/css/new.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <script src="<{$resources_dir}>/js/jquery.min.js"></script>
 <script src="<{$resources_dir}>/js/base.min.js"></script>
 <script src="<{$resources_dir}>/js/project.min.js"></script>

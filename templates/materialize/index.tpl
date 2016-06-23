@@ -64,7 +64,7 @@
 								<div class="card card-brand">
 									<div class="card-main">
 										<div class="card-inner">
-											<p class="card-heading">macOS</p>
+											<p class="card-heading">Mac OS</p>
 											<p>ShadowsocksX</p>
 										</div>
 										<div class="card-action">
@@ -112,4 +112,5 @@
 		</div>
 	</main>
 </body>
-<{include file='footer.tpl'}>
+<p>&nbsp;</p>
+<p><{include file='footer.tpl'}></p>

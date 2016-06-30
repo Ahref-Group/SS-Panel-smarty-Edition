@@ -40,6 +40,14 @@
 						</div>
 						<span class="margin-right-sm text-black">Dwwwwww</span>
 					</a>
+				<li>
+					<a class="margin-bottom-sm waves-attach" data-dismiss="modal" href="javascript:void(0)">
+						<div class="avatar avatar-inline margin-left-sm margin-right-sm">
+							<img alt="alt text for another_account avatar" src="<{$resources_dir}>/images/users/kot4ri.jpg">
+						</div>
+						<span class="margin-right-sm text-black">kot4ri</span>
+					</a>
+				</li>
 				</li>
 			</ul>
 		</div>

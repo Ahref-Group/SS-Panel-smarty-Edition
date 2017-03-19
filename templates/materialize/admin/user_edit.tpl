@@ -67,6 +67,10 @@
 											<label class="floating-label" for="plan_end_time">套餐到期时间</label>
 											<input class="form-control" id="plan_end_time" type="text"  onclick="$('#plan_end_time').pickdate();" value="<{date('Y-m-d',$rs['plan_end_time'])}>">
 										</div>
+										<div class="form-group form-group-label">
+											<label class="floating-label" for="message">用戶獨立通知</label>
+											<textarea class="form-control textarea-autosize" id="message" type="text" ><{$rs['message']}></textarea>
+										</div>
 										<div class="checkbox switch">
 											<label for="enable">停止/
 												<input class="access-hide" id="enable" name="enable" type="checkbox"<{if $rs['enable']==1}> checked="checked" <{/if}>  ><span class="switch-toggle"></span>
@@ -127,7 +131,8 @@ $(document).ready(function(){
                 transfer_enable_hidden: "<{\Ss\Etc\Comm::flowAutoShow($rs['transfer_enable'])}>",
                 invite_num: $("#invite_num").val(),
                 enable: document.getElementById("enable").checked ? "1" : "0",
-                plan_end_time: get_unix_time($("#plan_end_time").val())
+                plan_end_time: get_unix_time($("#plan_end_time").val()),
+		message: $("#message").val()
             },
             success:function(data){
                 $('#loading').hide();

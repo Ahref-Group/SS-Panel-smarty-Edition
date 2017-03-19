@@ -160,7 +160,7 @@
                     if(data.ok){
                         $("#result").modal();
                         $("#msg").html(data.msg);
-                        window.setTimeout("location.href='login.php'", 2000);
+                        window.setTimeout("location.href='../auth/login.php'", 2000);
                     }else{
                         $("#result").modal();
                         $("#msg").html(data.msg);

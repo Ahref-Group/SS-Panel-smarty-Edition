@@ -31,9 +31,10 @@ if(!empty($_POST)){
     $enable = $_POST['enable'];
     $plan = $_POST['plan'];
     $plan_end_time=$_POST['plan_end_time'];
+    $message = $_POST['message'];
     //更新
     $User = new Ss\User\User($uid);
-    $query = $User->updateUser($name,$email,$pass,$passwd,$transfer_enable,$invite_num,$plan,$enable,$plan_end_time);
+    $query = $User->updateUser($name,$email,$pass,$passwd,$transfer_enable,$invite_num,$plan,$enable,$plan_end_time,$message);
     if($query){
                 $ue['code'] = '1';
                 $ue['ok'] = '1';

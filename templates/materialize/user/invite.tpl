@@ -35,7 +35,8 @@
 									<div class="card-table">
 										<p>哇~你有<code><{$InviteNum}></code>个喵星人耶( •̀ ω •́ )y  </p>
 										<{if $InviteNum !=0}>
-											<button id="invite" class="btn btn-brand waves-attach"><i class="icon icon-lg">near_me</i>&nbsp;我要生喵！</button><br><br>
+											<button id="invite" class="btn btn-brand-accent waves-attach"><i class="icon icon-lg">near_me</i>&nbsp;我要生喵！</button>
+											<br/><br/>
 										<{/if}>
 										<{include file='loading.tpl'}>
 									</div>
@@ -60,10 +61,10 @@
 							<div class="card-inner margin-bottom-no">
 								<p class="card-heading"><i class="icon icon-lg">adb</i>&nbsp;我的喵星人</p>
 								<div class="card-inner">
-									<{if $oo->get_enable()==1}>
+								    <{if $oo->get_enable()==1}>
 										<{if count($code)!=null}>
 											<div class="table-responsive">
-												<table class="table" title="A basic table">
+												<table class="table" title="Code">
 													<thead>
 														<tr>
 															<th>###</th>
@@ -86,9 +87,11 @@
 											</div>
 										<{/if}>
 									<{else}>
-										<div class="card-table">
-											<p>您的账号已被暂停，无法查看邀请码</p>
-										</div>
+									    <div class="table-responsive">
+												<table class="table" title="Code">
+													<p class="text-center">您的账号已经被停止，无法查看邀请码.</p>
+												</table> 
+											</div>
 									<{/if}>
 								</div>	
 							</div>

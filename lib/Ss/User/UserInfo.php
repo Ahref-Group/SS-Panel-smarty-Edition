@@ -76,6 +76,9 @@ class UserInfo {
         // $current_transfer = $this->UserArray()['transfer_enable'];
         $this->db->update('user', ['transfer_enable'=>$transfer], ['uid'=>$this->uid]);
     }
+    function clean_user_transfer(){
+        $this->db->update('user', ['u'=>'0','d'=>'0', ], ['uid'=>$this->uid]);
+    }
     
     function ChangePlan($plan){
         $this->db->update("user",[
@@ -92,6 +95,16 @@ class UserInfo {
         else
             $data = time() + $data*86400;
             
+        $this->db->update("user",[
+            "plan_end_time"=>$data,
+            ],[
+                "uid"=>$this->uid
+            ]);
+    }
+    
+    function update_plan_go_time($data){
+        $current_end_time = $this->get_plan_end_time();
+        $data = time() + $data*86400;
         $this->db->update("user",[
             "plan_end_time"=>$data,
             ],[

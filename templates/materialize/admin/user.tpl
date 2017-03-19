@@ -74,7 +74,7 @@
 					<div class="card-inner margin-bottom-no">
 						<div class="card-table">
 							<div class="table-responsive">
-								<table class="table table_no dataTable" id="user" title="Node List">
+								<table class="table table_no dataTable" id="user" title="User List">
 									<thead>
 										<tr>
 											<th>ID</th>
@@ -91,6 +91,7 @@
 											<th>最后签到</th>
 											<th>最近使用</th>
 											<th>启用状态</th>
+											<th>封禁状态</th>
 											<th>邀请人</th>
 											<th>邀请码</th>
 											<th>操作</th>
@@ -111,7 +112,12 @@
 											<td><{$rs[ 'reg_date']}></td>
 											<td><{date( 'Y-m-d H:i',$rs[ 'last_check_in_time'])}></td>
 											<td><{date( 'Y-m-d H:i',$rs[ 't'])}></td>
-											<td><{if $rs[ 'enable']}>正常<{else}><code>停止</code><{/if}></td>
+											<td>
+											    <{if $rs[ 'enable'] == 1}><a href="user_false.php?uid=<{$rs['uid']}>" onclick="JavaScript:return confirm('确定停止吗？')">正常</a><{else}><a href="user_true.php?uid=<{$rs['uid']}>" onclick="JavaScript:return confirm('确定启用吗？')"><code>停止</code></a><{/if}>
+											</td>
+											<td>
+											    <{if $rs[ 'enable'] == 3}><a href="user_false.php?uid=<{$rs['uid']}>" onclick="JavaScript:return confirm('确定解封吗？')"><code>封禁</code></a><{else}><a href="user_ban.php?uid=<{$rs['uid']}>" onclick="JavaScript:return confirm('确定封禁吗？')">正常</a><{/if}></a>
+											</td>
 											<td><{get_ref_name rs=$rs[ 'ref_by']}></td>
 											<{* 调用自定义插件 传$rs[ 'ref_by'] 然后返回数据 *}>
 											<td><{$rs[ 'invite_num']}></td>

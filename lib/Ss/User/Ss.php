@@ -29,6 +29,11 @@ class Ss {
     function  get_port(){
          return $this->get_user_info_array()['port'];
     }
+	
+    //返回信息
+    function  get_message(){
+         return $this->get_user_info_array()['message'];
+    }
 
     //获取流量
     function get_transfer(){

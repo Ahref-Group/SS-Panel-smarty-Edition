@@ -69,3 +69,26 @@
 			</div>
 		</div>
 	</nav>
+<div aria-hidden="true" class="modal modal-va-middle fade" id="pop_up" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-inner text-center">
+				    <h3>全局通知</h3>
+				    <p id="pop_msg"><{$notice->notice('pop_up')}></p>
+				</div>
+					
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-brand-accent waves-attach" id="disable" data-dismiss="modal" type="button">不再提示</button><button class="btn btn-flat btn-brand-accent waves-attach" data-dismiss="modal" type="button">我知道了</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--script>
+	    var msg = $('#pop_msg').html;
+	    if(msg.length != 0) $('#pop_up').modal();
+	    $("#disable").click(function(){
+	        var expdate = new Date();
+	        expdate.setTime(expdate.getTime() + 7 * 24 * 60 * 60 * 1000);
+	        document.cookie = "msg" + "=" + msg + ";expires="+expdate.toGMTString()+";path=/";
+	   });
+	</script-->

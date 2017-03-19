@@ -35,6 +35,21 @@
 					</div>
 				</div>
 				<div class="col-lg-6 col-sm-12">
+				    <{if $oo->get_message()==''}>
+					<{else}>
+						<div class="col-lg-12 col-sm-12">
+							<div class="card">
+								<div class="card-main">
+									<div class="card-inner">
+										<div class="text-center">
+											<p class="card-heading"><i class="icon icon-lg">chat</i>&nbsp;<{$GetUserName}>的通知</p>
+										</div>
+										<{$oo->get_message()}>
+									</div>
+								</div>
+							</div>
+						</div>
+                    <{/if}>
 					<div class="col-lg-12 col-sm-12">
 						<div class="card">
 							<div class="card-main">
@@ -125,7 +140,7 @@
 									<div class="text-center">
 										<p class="card-heading"><i class="icon icon-lg">info</i>&nbsp;账户信息</p>
 									</div>
-									<{if $oo->get_enable()}>
+									<{if $oo->get_enable()==1}>
 										<p>打死也不能让别人知道哦 >_<</p>
 										<p>状态:正常</p>
 										<p>
@@ -149,10 +164,12 @@
 											<p>套餐到期时间:<span class="label label-brand-accent margin-right"><{date( 'Y-m-d H:i:s',$oo->get_plan_end_time())}></span></p>
 										<{/if}>
 									<{else}>
-										<{if $oo->get_plan_end_time()<1451577600}>
+										<{if $oo->get_enable()==0}>
 											<p>状态:停止</p>
+											<p>您的帐户由于服务到期或尚未开通被停止服务，请在商店付费购买服务。</p>
 										<{else}>
-											<p>您因为7天内没有签到，账号已经被暂停，请购买任意套餐即可开通~</p>
+										    <p>狀態:停止</p>
+										    <p>您的帐户由于滥用被封禁，请联系管理员。</p>
 										<{/if}>
 									<{/if}>
 								</div>

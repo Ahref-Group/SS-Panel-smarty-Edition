@@ -21,7 +21,7 @@
 						<a class="padding-right-lg waves-attach" href="/user"><i class="icon icon-lg">account_circle</i>&nbsp;用户中心</a>
 					</li>
 					<li>
-						<a class="padding-right-lg waves-attach" href="/user/register.php"><i class="icon icon-lg">add</i>&nbsp;注册<{$site_name}></a>
+						<a class="padding-right-lg waves-attach" href="/auth/register.php"><i class="icon icon-lg">add</i>&nbsp;注册<{$site_name}></a>
 					</li>
 				</ul>
 			</li>

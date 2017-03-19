@@ -38,8 +38,12 @@
 										<thead>
 											<tr>
 												<th>ID</th>
-												<th>节点</th><th>加密</th>
+												<th>节点</th>
+												<th>加密</th>
 												<th>描述</th>
+												<th>协议(SSR特性)</th>
+												<th>混淆(SSR特性)</th>
+												<th>参数(SSR特性)</th>
 												<th>排序</th>
 												<th>操作</th>
 											</tr>
@@ -50,6 +54,9 @@
 												<td><{$rs['node_name']}></td>
 												<td><{$rs['node_method']}></td>
 												<td><{$rs['node_info']}></td>
+												<td><{$rs['protocol']}></td>
+												<td><{$rs['obfs']}></td>
+												<td><{$rs['parameter']}></td>
 												<td><{$rs['node_order']}></td>
 												<td>
 													<a class="btn btn-brand waves-attach waves-light" href="node_edit.php?id=<{$rs['id']}>">编辑</a>

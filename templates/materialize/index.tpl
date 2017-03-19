@@ -54,7 +54,7 @@
 										</div>
 										<div class="card-action">
 											<div class="card-action-btn pull-left">
-												<a class="btn btn-flat waves-attach waves-light" href="https://github.com/breakwa11/shadowsocks-csharp/releases"><i class="icon icon-lg">file_download</i>&nbsp;下载</a>
+												<a class="btn btn-flat waves-attach waves-light" href="https://bit.no.com:43110/shadowsocksr.bit"><i class="icon icon-lg">file_download</i>&nbsp;下载</a>
 											</div>
 										</div>
 									</div>
@@ -65,11 +65,11 @@
 									<div class="card-main">
 										<div class="card-inner">
 											<p class="card-heading">macOS</p>
-											<p>SSR for GoAgentX</p>
+											<p>ShadowsocksX-NG</p>
 										</div>
 										<div class="card-action">
 											<div class="card-action-btn pull-left">
-												<a class="btn btn-flat waves-attach waves-light" href="https://www.dropbox.com/s/yabgz5pe713xn3l/GoAgentX-SSR.dmg"><i class="icon icon-lg">file_download</i>&nbsp;下载</a>
+												<a class="btn btn-flat waves-attach waves-light" href="https://github.com/qinyuhang/ShadowsocksX-NG/releases"><i class="icon icon-lg">file_download</i>&nbsp;下载</a>
 											</div>
 										</div>
 									</div>
@@ -80,11 +80,11 @@
 									<div class="card-main">
 										<div class="card-inner">
 											<p class="card-heading">Android</p>
-											<p>Shadowsocks Nightly</p>
+											<p>ShadowsocksR Android</p>
 										</div>
 										<div class="card-action">
 											<div class="card-action-btn pull-left">
-												<a class="btn btn-flat waves-attach waves-light" href="https://github.com/shadowsocks/shadowsocks-android/releases"><i class="icon icon-lg">file_download</i>&nbsp;下载</a>
+												<a class="btn btn-flat waves-attach waves-light" href="https://bit.no.com:43110/shadowsocksr.bit"><i class="icon icon-lg">file_download</i>&nbsp;下载</a>
 											</div>
 										</div>
 									</div>
@@ -99,7 +99,7 @@
 										</div>
 										<div class="card-action">
 											<div class="card-action-btn pull-left">
-												<a class="btn btn-flat waves-attach waves-light" href="https://itunes.apple.com/cn/app/shadowrocket/id932747118?mt=8"><i class="icon icon-lg">file_download</i>&nbsp;下载</a>
+												<a class="btn btn-flat waves-attach waves-light" href="https://itunes.apple.com/cn/app/shadowrocket/id932747118?mt=8"><i class="icon icon-lg">file_download</i>&nbsp;下載</a>
 											</div>
 										</div>
 									</div>
@@ -112,4 +112,4 @@
 		</div>
 	</main>
 </body>
-<{include file='footer.tpl'}>
+<p><{include file='footer.tpl'}></p>

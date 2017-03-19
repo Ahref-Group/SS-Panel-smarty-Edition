@@ -43,6 +43,9 @@
 						<a class="waves-attach" href="user.php">管理用户</a>
 					</li>
 					<li>
+						<a class="waves-attach" href="ip_list.php">查看登录IP</a>
+					</li>
+					<li>
 						<a class="waves-attach" href="plan.php">管理计划</a>
 					</li>
 					<li>

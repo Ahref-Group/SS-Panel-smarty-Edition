@@ -28,7 +28,7 @@ class Reg {
         $sspass = \Ss\Etc\Comm::get_random_char(8);
 
         $this->db->insert($this->table,[
-           "user_name" => $username,
+           "user_name" => preg_replace('/[^\w@.]+/','',$username),
             "email" => $email,
             "pass" => $pass,
             "passwd" =>  $sspass,

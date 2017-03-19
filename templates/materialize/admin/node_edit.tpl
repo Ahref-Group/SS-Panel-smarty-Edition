@@ -57,9 +57,24 @@
 										</select>
 									</div>
 									<div class="form-group form-group-label" id="custom_node_method_form">
-										<label class="floating-label" id="custom_node_method"for="custom_node_method">自定义加密方式</label>
+										<label class="floating-label" id="custom_node_method_form"for="custom_node_method">自定义加密方式</label>
 										<input class="form-control" id="custom_node_method" type="text" value="<{$rs['node_method']}>">
 									</div>
+									
+									<div class="form-group form-group-label">
+										<label class="floating-label" for="protocol">加密协议(SSR特性)</label>
+										<input class="form-control" id="protocol" type="text" value="<{$rs['protocol']}>">
+									</div>
+									<div class="form-group form-group-label">
+										<label class="floating-label" for="obfs">混淆方式(SSR特性)</label>
+										<input class="form-control" id="obfs" type="text" value="<{$rs['obfs']}>">
+									</div>
+									<div class="form-group form-group-label">
+										<label class="floating-label" for="parameter">混淆参数(SSR特性)</label>
+										<input class="form-control" id="parameter" type="text" value="<{$rs['parameter']}>">
+									</div>
+									
+									
 									<div class="form-group form-group-label">
 										<label class="floating-label" for="node_info">节点描述</label>
 										<textarea class="form-control textarea-autosize" id="node_info" rows="1"><{$rs['node_info']}></textarea>
@@ -120,7 +135,10 @@
                     node_info: $("#node_info").val(),
                     node_type: $("#node_type").val(),
                     node_status: $("#node_status").val(),
-                    node_order: $("#node_order").val()
+                    node_order: $("#node_order").val(),
+					protocol: $("#protocol").val(),
+					obfs: $("#obfs").val(),
+					parameter: $("#parameter").val()
                 },
                 success:function(data){
                     if(data.ok){

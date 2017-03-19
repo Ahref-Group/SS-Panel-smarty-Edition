@@ -39,7 +39,7 @@
 										</div>
 									</div>
 								</div>
-								<{if $oo->get_enable()==0}>
+								<{if $oo->get_enable()==0 || $oo->get_enable()==3}>
 									<div class="card card-red">
 										<div class="card-main">
 											<div class="card-inner">
@@ -77,7 +77,10 @@
 																    <a class="waves-attach" href="javascript:void(0)"><i class="icon icon-lg">device_hub</i>&nbsp;伺服器状态：<{$row['node_status']}></a>
 																</li>
 																<li>
-																    <a class="waves-attach" href="javascript:void(0)"><i class="icon icon-lg">security</i>&nbsp;伺服器加密方式：<{$row['node_method']}></a>
+																    <a class="waves-attach" href="javascript:void(0)"><i class="icon icon-lg">security</i>&nbsp;加密方式：<{$row['node_method']}></a>
+																</li>
+																<li>
+																    <a class="waves-attach" href="javascript:void(0)"><i class="icon icon-lg">lock_outline</i>&nbsp;SSR（空白为原版）：<{$row['protocol']}>/<{$row['obfs']}>/<{$row['parameter']}></a>
 																</li>
 															</ul>
 														</li>
@@ -118,7 +121,7 @@
 										</div>
 									</div>
 								</div>
-								<{if $oo->get_enable()==0}>
+								<{if $oo->get_enable()==0 || $oo->get_enable()==3}>
 									<div class="card card-red">
 										<div class="card-main">
 											<div class="card-inner">
@@ -157,6 +160,9 @@
 																	<li>
 																		<a class="waves-attach" href="javascript:void(0)"><i class="icon icon-lg">security</i>&nbsp;伺服器加密方式：<{$row['node_method']}></a>
 																	</li>
+															        	<li>
+															        	     <a class="waves-attach" href="javascript:void(0)"><i class="icon icon-lg">lock_outline</i>&nbsp;SSR（空白为原版）：<{$row['protocol']}>/<{$row['obfs']}>/<{$row['parameter']}></a>
+														        		</li>
 																</ul>
 															</li>
 														</ul>
@@ -207,14 +213,19 @@
 																	<li>
 																		<a class="waves-attach" href="javascript:void(0)"><i class="icon icon-lg">security</i>&nbsp;伺服器加密方式：<i class="icon icon-lg">visibility_off</i></a>
 																	</li>
+															        	<li>
+															        	     <a class="waves-attach" href="javascript:void(0)"><i class="icon icon-lg">lock_outline</i>&nbsp;SSR（空白为原版）：<i class="icon icon-lg">visibility_off</i></a>
+															        	</li>
 																</ul>
 															</li>
 														</ul>
+														<{if $plan == 'E' or $plan == 'D'}>
 														<ul class="nav nav-list margin-no pull-left">
 															<li>
 																<a href="javascript:void(0)" class='dropdown-toggle text-black waves-attach'><i class="icon icon-lg">import_export</i><span class="ping" id="<{$row['id']}>_ping" value="<{$row['node_server']}>">Ping</span></a>
 															</li>
 														</ul>
+														<{/if}>
 														<ul class="nav nav-list margin-no pull-right">
 															<li class="dropdown">
 																<a href="#buy" class="dropdown-toggle text-black waves-attach" data-toggle="modal"><i class="icon icon-lg">next_week</i>&nbsp;支付</a>
@@ -271,6 +282,11 @@
 			<div class="text-center">
 				<div class="modal-inner" id="qrcode"></div>
 			</div>
+			<div class="text-center">
+				<a href="" target="_blank" class="ssrlink">点击添加配置文件（需客户端支持）</p>
+			</div>
+			</hr>
+			
 		</div>
 	</div>
 </div>
@@ -290,7 +306,7 @@ p = new Ping();
         p.ping(url, function(data){
             if ($('#'+ping_id).html() == 'Ping')
                 {
-                    $('#'+ping_id).html('请稍后');
+                    $('#'+ping_id).html('请稍候');
                     ping_result(ping_id, url);
                 }
             else
@@ -353,7 +369,8 @@ p = new Ping();
         ssurl=$(this).attr('value');
         $('#qrcode').html('<img src="../code/api.php?text='+ssurl+'" height="250px" width ="250px"\>');
         $('#node_qr').modal();
-        });
+        $('.ssrlink').attr('href',ssurl);
+	});
 </script>
 <script type="text/javascript">
     $(document).ready(function(){

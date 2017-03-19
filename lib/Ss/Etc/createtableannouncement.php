@@ -1,7 +1,7 @@
 <?php
 // print_r($_SERVER);
 // echo str_replace('\\' , $_SERVER['DOCUMENT_URI'] , '/lib').'/config.php';
-include_once str_replace('\\' , $_SERVER['DOCUMENT_URI'] , '/lib').'/config.php';
+include_once dirname(__FILE__).'/../../../config.php';
 
 if (!file_exists(str_replace('\\' , '/' , SS_PATH.'/lib/Ss/Sqlitedb/').SQLITEDIR."/".SQLITEDB)){
  class MyDB extends SQLite3

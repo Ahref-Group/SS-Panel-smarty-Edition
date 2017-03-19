@@ -28,10 +28,32 @@ function get_ss_url($id){
     global $oo;
     $server =  $node->Server();
     $method = $node->Method();
+	$protocol = $node->protocol(); //protocol
+	$obfs = $node->obfs(); //obfs
+	$parameter = $node->parameter(); //protocol_param
+	
     $pass = $oo->get_pass();
     $port = $oo->get_port();
-    $ssurl =  $method.":".$pass."@".$server.":".$port;
-    return "ss://".base64_encode($ssurl);
+    
+	
+	if (($obfs == 'plain' or $obfs == '') and ($protocol == 'origin' or $protocol == '')  and $parameter == '' ){
+		$ssurl =  $method.":".$pass."@".$server.":".$port;
+    	return "ss://".base64_encode($ssurl);
+    }
+	else {
+		if ($obfs == 'plain' or $obfs == ''){
+		$obfs =  "plain";
+        }
+		if ($protocol == 'origin' or $protocol == ''){
+		$protocol =  "origin";
+        }
+		//ssr://base64(host:port:protocol:method:obfs:base64pass/?obfsparam=base64&remarks=base64&group=base64&udpport=0&uot=1)
+        $ssurl =  $server.":".$port.":".$protocol.":".$method.":".$obfs.":".base64_encode($pass)."/?obfsparam=".base64_encode($parameter)."&remarks=".base64_encode($server)."&group=".base64_encode('')."&udpport=0&uot=1";
+    	return "ssr://".base64_encode($ssurl);
+    }
+	
+	
 }
+
 
 ?>

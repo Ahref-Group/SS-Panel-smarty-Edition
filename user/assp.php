@@ -5,7 +5,7 @@ session_start();
 //默认为false
 $_SESSION['assp']=false;
 //产生随机数
-$js_ua_id=rand(9876543210,0123456789);
+$js_ua_id=rand(54321,12345);
 //把随机数保存
 $_SESSION['js_ua_id']=$js_ua_id;
 $js_ua_code = "\n".'

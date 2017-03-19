@@ -28,7 +28,7 @@ if($U->GetPasswd() != $nowpwd) {
 }else{
     $a['ok'] = '1';
     // $U->UpdatePWd($pwd);
-    $a['msg'] = "修改成功".$pwd;
+    $a['msg'] = "修改成功，新密码为：".$pwd;
     $pwd = \Ss\User\Comm::SsPW($pwd);
     $U->UpdatePwd($pwd);
 }

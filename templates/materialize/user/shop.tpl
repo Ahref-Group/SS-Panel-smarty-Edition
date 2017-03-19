@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 <meta charset="UTF-8">
 <meta content="IE=edge" http-equiv="X-UA-Compatible">
 <meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
@@ -27,7 +27,7 @@
 					</div>
 				</div>
 				<div class="col-lg-12 col-sm-12">
-					<h2 class="content-sub-heading"></h2>
+					<h2 class="content-sub-heading">周期套餐</h2>
 					<div class="card">
 						<div class="card-main">
 							<div class="card-inner">

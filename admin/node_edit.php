@@ -13,8 +13,11 @@ if(!empty($_POST)){
     $node_info     = $_POST['node_info'];
     $node_status   = $_POST['node_status'];
     $node_order    = $_POST['node_order'];
+    $protocol    = $_POST['protocol'];
+	$obfs    = $_POST['obfs'];
+	$parameter    = $_POST['parameter'];
     $node = new \Ss\Node\NodeInfo($node_id);
-    $query = $node->Update($node_name,$node_type,$node_server,$node_method,$node_info,$node_status,$node_order);
+    $query = $node->Update($node_name,$node_type,$node_server,$node_method,$node_info,$node_status,$node_order,$protocol,$obfs,$parameter);
     if($query){
         $ue['code'] = '1';
         $ue['ok'] = '1';

@@ -16,6 +16,10 @@ class NodeInfo extends \Ss\Etc\Db {
         return $datas['0'];
     }
 
+    function Name(){
+	return $this->NodeArray()['node_name'];
+    }
+
     function Server(){
         return $this->NodeArray()['node_server'];
     }

@@ -9,6 +9,9 @@ Please check our new project [Ahref-Group/SuperPanel](https://github.com/Ahref-G
 
 请移步到我们的新项目[Ahref-Group/SuperPanel](https://github.com/Ahref-Group/SuperPanel).
 
+2019年6月1日更新：由于Bug满天飞的缘故，已经懒得pull到Github上了，打个包给你们，想用的话请直接从这里下载，3Q！
+[Google云端硬盘](https://drive.google.com/file/d/1-MwaldEMq6WKOWU59sPHBYEKUZR4V7ya)
+
 Great thanks to [kot4ri](https://zankyo.cc/) xiaoxin and others for their help with fixing bugs and updating functions.
 
 炒鸡感谢 [kot4ri](https://zankyo.cc/) xiaoxin 两位大佬不停的给我们这个版本修复Bug和更新内容！！

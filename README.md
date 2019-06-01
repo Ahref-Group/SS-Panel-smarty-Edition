@@ -5,7 +5,7 @@ This Version is based on xuanhuan's [SS-Panel-smarty](https://github.com/xuanhua
 
 已修复大多数Bug，打个包给你们，想用的话请直接从这里下载，3Q！
 
-[Google云端硬盘](https://drive.google.com/file/d/1-MwaldEMq6WKOWU59sPHBYEKUZR4V7ya)
+[Google云端硬盘](https://drive.google.com/file/d/1fj2HB8_yKDl2iPE55ZNpHTNjY0-zG1Sn)
 
 If there is no serious Bug, then this version will not continue to update the.
 

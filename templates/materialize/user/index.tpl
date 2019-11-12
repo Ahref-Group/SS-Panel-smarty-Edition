@@ -126,7 +126,7 @@
 											<p class="card-heading"><i class="icon icon-lg">dashboard</i>&nbsp;付费账户信息</p>
 											<p>已用流量:<{$transfers|default:0}> MB<p>
 											<p>到期时间<span class="label label-brand-accent margin-right"><{date( 'Y-m-d H:i:s',$oo->get_plan_end_time())}></span></p>
-											<p> 您是不限流量用户，不需担心流量的问题！</p>
+											<p>您是不限流量用户，不需担心流量的问题！</p>
 										<{/if}>
 									</div>
 								</div>
@@ -151,14 +151,14 @@
 												<p>端口:<span class="label label-brand-accent margin-right info"><{$oo->get_port()}></span></p>
 												<p>密码:<span class="label label-brand-accent margin-right info"><{$oo->get_pass()}></span></p>
 												<p>协议:<span class="label label-brand-accent margin-right info"><{$oo->get_protocol()}></span></p>
-												<p>密码:<span class="label label-brand-accent margin-right info"><{$oo->get_obfs()}></span></p>
+												<p>混淆:<span class="label label-brand-accent margin-right info"><{$oo->get_obfs()}></span></p>
 												<p>算法:<span class="label label-brand-accent margin-right info"><{$oo->get_method()}></span></p>
 											</div>
 										</p>
 										<{if $oo->get_plan()==A}>
 											<p>套餐:<span class="label label-brand-accent margin-right">免费用户</span></p>
 										<{else}>
-											<p>套餐:<span class="label label-brand-accent margin-right">付费用户</span><code><{$plan_type}></code>套餐</p>
+											<p>套餐:<span class="label label-brand-accent margin-right">付费<{$plan_type}>套餐</span></p>
 										<{/if}>
 										<p>最后使用时间:<span class="label label-brand-accent margin-right"><{date( 'Y-m-d H:i:s',$unix_time)}></span></p>
 										<{if $oo->get_plan()==A}>
@@ -171,8 +171,8 @@
 											<p>状态:停止</p>
 											<p>您的帐户由于服务到期或尚未开通被停止服务，请在商店付费购买服务。</p>
 										<{else}>
-										    <p>狀態:停止</p>
-										    <p>您的帐户由于滥用被封禁，请联系管理员。</p>
+                                          	<p>状态:封禁</p>
+										    <p>您的帐户由于滥用或其他原因被封禁，请联系管理员。</p>
 										<{/if}>
 									<{/if}>
 								</div>

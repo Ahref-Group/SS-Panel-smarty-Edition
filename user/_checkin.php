@@ -12,7 +12,7 @@ elseif(!$oo->is_able_to_check_in()){
     $transfer_to_add = 0;
 }else {
     if ($oo->unused_transfer() < 2048 * $tomb) {
-        $transfer_to_add = rand(1024, 2048);
+        $transfer_to_add = 0;
     } else {
         $transfer_to_add = rand($check_min, $check_max);
     }

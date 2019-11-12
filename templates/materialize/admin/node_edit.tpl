@@ -97,7 +97,7 @@
             $('#loading').show();
             $.ajax({
                 type:"POST",
-                url:"node_edit.php",
+                url:"node_add.php",
                 dataType:"json",
                 data:{
                     node_id: "<{$id}>",

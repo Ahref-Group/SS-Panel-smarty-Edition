@@ -108,31 +108,35 @@ class UserCheck {
 function resolve_ip($ip){
      //返回ip对应的地址
     
-    //taobao API
-    $result = json_decode(file_get_contents("http://ip.taobao.com/service/getIpInfo.php?ip=".$ip), true);
-    if($result['code'] == 0){
-        return $result['data']['country'].' '.$result['data']['region'].
-            ' '.$result['data']['city'].' '.$result['data']['isp'];
-    }
+    //如果服务器被墙了用不了淘宝IP库那就这样 起码能登录
+    return 'IP库暂不可用';
     
-    else 
-        return '查询失败';
+    
+    //taobao API
+    // $result = json_decode(file_get_contents("http://ip.taobao.com/service/getIpInfo.php?ip=".$ip), true);
+    // if($result['code'] == 0){
+    //     return $result['data']['country'].' '.$result['data']['region'].
+    //         ' '.$result['data']['city'].' '.$result['data']['isp'];
+    // }
+    
+    // else 
+    //     return '查询失败';
     
     //IPIP.NET付费API
     //如使用请注释掉上方taobao API并修改下方token值
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, "http://ipapi.ipip.net/find?addr=".$ip);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Token: Input_Your_Token_There'));
+    // $ch = curl_init();
+    // curl_setopt($ch, CURLOPT_URL, "http://ipapi.ipip.net/find?addr=".$ip);
+    // curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    // curl_setopt($ch, CURLOPT_HTTPHEADER, array('Token: Input_Your_Token_There'));
     
-    $output = json_decode(curl_exec($ch), true);
-    if($output['ret'] == 'ok'){
-        $info = $output['data'][0].' '.$output['data'][1].' '.$output['data'][2].' '.$output['data'][3].
-        ' '.$output['data'][4];
-    }
-    else 
-        $info = '查询失败'.$output['msg'];
-    return $info;
+    // $output = json_decode(curl_exec($ch), true);
+    // if($output['ret'] == 'ok'){
+    //     $info = $output['data'][0].' '.$output['data'][1].' '.$output['data'][2].' '.$output['data'][3].
+    //     ' '.$output['data'][4];
+    // }
+    // else 
+    //     $info = '查询失败'.$output['msg'];
+    // return $info;
 }
 
 /*获取真实IP*/

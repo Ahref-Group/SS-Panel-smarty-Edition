@@ -36,7 +36,7 @@
 							<div class="card-inner">
 								<p class="text-center">
 									<span class="avatar avatar-inline avatar-lg">
-										<img alt="Login" src="https://github.com/Ahref-Group/SS-Panel-smarty-Edition/raw/smarty/templates/materialize/images/users/avatar-002.jpg">
+										<img alt="Login" src="https://secure.gravatar.com/avatar/253c7d9e9039f0d2b61615ea280ecb3e?s=80&d=mm&r=g">
 									</span>
 								</p>
 								<form action="javascript:void(0);" autocomplete="off" method="POST">

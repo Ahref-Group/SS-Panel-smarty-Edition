@@ -94,6 +94,12 @@
 														<a href="javascript:void(0)" class="dropdown-toggle text-black waves-attach getqrcode" value="<{$row['qr']}>"><i class="icon icon-lg">blur_on</i>二维码</a>
 													</ul>
 												</div>
+												<div class="card-action text-center" style="min-height:15px;">
+													<div class="col-lg-3 col-md-3 col-sm-3 col-xl-3"><small><i class="icon icon-lg">data_usage</i>&nbsp;负载:&nbsp;<span id="<{$row['id']}>_load"><{$row['load_1']}></span></small></div>
+													<div class="col-lg-3 col-md-3 col-sm-3 col-xl-3"><small><i class="icon icon-lg">graphic_eq</i>&nbsp;CPU:&nbsp;<span id="<{$row['id']}>_cpu"><{$row['cpu']}></span></small></div>
+													<div class="col-lg-3 col-md-3 col-sm-3 col-xl-3"><small><i class="icon icon-lg">trending_up</i>&nbsp;上行:&nbsp;<span id="<{$row['id']}>_upload"><{$row['upload']}></span></small></div>
+													<div class="col-lg-3 col-md-3 col-sm-3 col-xl-3"><small><i class="icon icon-lg">trending_down</i>&nbsp;下行:&nbsp;<span id="<{$row['id']}>_download"><{$row['download']}></span></small></div>
+												</div>
 											</div>
 										</div>
 									<{/foreach}>
@@ -168,6 +174,12 @@
 														<ul class="nav nav-list margin-no pull-right">
 															<a href="javascript:void(0)" class="dropdown-toggle text-black waves-attach getqrcode" value="<{$row['qr']}>"><i class="icon icon-lg">blur_on</i>二维码</a>
 														</ul>
+													</div>
+													<div class="card-action text-center" style="min-height:15px;">
+														<div class="col-lg-3 col-md-3 col-sm-6 col-xl-12"><small><i class="icon icon-lg">data_usage</i>&nbsp;负载:&nbsp;<span id="<{$row['id']}>_load"><{$row['load_1']}></span></small></div>
+														<div class="col-lg-3 col-md-3 col-sm-6 col-xl-12"><small><i class="icon icon-lg">graphic_eq</i>&nbsp;CPU:&nbsp;<span id="<{$row['id']}>_cpu"><{$row['cpu']}></span></small></div>
+														<div class="col-lg-3 col-md-3 col-sm-6 col-xl-12"><small><i class="icon icon-lg">trending_up</i>&nbsp;上行:&nbsp;<span id="<{$row['id']}>_upload"><{$row['upload']}></span></small></div>
+														<div class="col-lg-3 col-md-3 col-sm-6 col-xl-12"><small><i class="icon icon-lg">trending_down</i>&nbsp;下行:&nbsp;<span id="<{$row['id']}>_download"><{$row['download']}></span></small></div>
 													</div>
 												</div>
 											</div>

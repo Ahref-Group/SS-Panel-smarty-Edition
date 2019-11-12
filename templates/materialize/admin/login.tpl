@@ -37,7 +37,7 @@
 							<div class="card-inner">
 								<p class="text-center">
 									<span class="avatar avatar-inline avatar-lg">
-										<img alt="Login" src="https://avatar.duoshuo.com/avatar-50/760/144058.jpg">
+										<img alt="Login" src="https://dl.zankyo.cc/img/mc/au.jpg">
 									</span>
 								</p>
 								<form action="javascript:void(0);"  method="POST">

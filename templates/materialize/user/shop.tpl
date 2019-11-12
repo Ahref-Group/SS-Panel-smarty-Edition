@@ -131,6 +131,7 @@
 			</section>
 		</div>
 	</main>
+	<{include file='../footer.tpl' }>
 </body>
 	<div aria-hidden="true" class="modal modal-va-middle fade" id="confirm" role="dialog" tabindex="-1">
 		<div class="modal-dialog modal-xs">
@@ -281,4 +282,4 @@ $('#exchange').click(function(){
         $("#exchange").hide();
     });
 </script>
-<{include file='../footer.tpl' }><ml>
+<ml>

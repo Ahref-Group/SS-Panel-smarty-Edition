@@ -10,7 +10,7 @@ if(!empty($_POST)){
     $node_order    = $_POST['node_order'];
 	$parameter    = $_POST['parameter'];
     $node = new Ss\Node\Node();
-    $query = $node->Add($node_name,$node_type,$node_server,,$node_info,$node_status,$node_order,,$parameter);
+    $query = $node->Add($node_name,$node_type,$node_server,$node_info,$node_status,$node_order,$parameter);
     if($query){
         $ue['code'] = '1';
         $ue['ok'] = '1';

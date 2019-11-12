@@ -40,7 +40,7 @@ if (isset($_GET['method'])){
 			            if ($oo->get_enable() == 0){
                             $UserInfo->set_enable(1);
                         }
-                        $info ='兑换成功！<br>您成功添加了'.$plan['data'].'GB的普通节点流量<br>当前流量：'.$UserInfo->get_transfer()/1073741824.0.' GB<br>流量用完后自动回归免费帐号并获得2GB流量';
+                        $info ='兑换成功！<br>您成功添加了'.$plan['data'].'GB的普通节点流量<br>当前流量：'.$UserInfo->get_transfer()/1073741824.0.' GB';
                         break;
                         
                     case 'Ta'://高级流量
@@ -58,7 +58,7 @@ if (isset($_GET['method'])){
 			            if ($oo->get_enable() == 0){
                             $UserInfo->set_enable(1);
                         }
-                        $info ='兑换成功！<br>您成功添加了'.$plan['data'].'GB的高级节点流量<br>当前流量：'.$UserInfo->get_transfer()/1073741824.0.' GB<br>流量用完后自动回归免费帐号并获得2GB流量';
+                        $info ='兑换成功！<br>您成功添加了'.$plan['data'].'GB的高级节点流量<br>当前流量：'.$UserInfo->get_transfer()/1073741824.0.' GB';
                         break;
                         
                     case 'Ca'://高级周期
@@ -79,7 +79,7 @@ if (isset($_GET['method'])){
                         if($current_plan != 'C'){
                         $UserInfo->Changeplan('C');
                         $UserInfo->update_plan_go_time($plan['data']);
-                        $UserInfo->update_transfer(1099511627776);
+                        $UserInfo->update_transfer(214748364800);
                         }
 		                else{
                         $UserInfo->update_plan_end_time($plan['data']);

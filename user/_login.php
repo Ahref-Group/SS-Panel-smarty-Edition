@@ -32,8 +32,9 @@ elseif($c->EmailLogin($email,$passwd)){
     }
     //获取用户id
     $id = $q->GetUidByEmail($email);
-    
+    //服务器被墙了就没办法从淘宝IP库查询了
     $c->save_ip($id);
+
     //处理密码
     $pw = \Ss\User\Comm::CoPW($passwd);
     setcookie("user_pwd",$pw,time()+$ext);

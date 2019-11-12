@@ -30,10 +30,10 @@ if(!empty($_POST)){
     $invite_num = $_POST['invite_num'];
     $enable = $_POST['enable'];
     $plan = $_POST['plan'];
-	$plan = $_POST['protocol'];
-	$obfs = $_POST['obfs'];
-	$method = $_POST['method'];
-    $plan_end_time=$_POST['plan_end_time'];
+	$protocol = $_POST['user_protocol'];
+	$obfs = $_POST['user_obfs'];
+	$method = $_POST['user_method'];
+    $plan_end_time = $_POST['plan_end_time'];
     $message = $_POST['message'];
     //更新
     $User = new Ss\User\User($uid);

@@ -5,7 +5,7 @@
 <meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
 <meta name="theme-color" content="#293696">
 <{include file='source.tpl'}>
-<title>登录 -<{$site_name}></title>
+<title>ログイン -<{$site_name}></title>
 <{include file='header.tpl'}>
 	<div class="content-header ui-content-header">
 		<div class="container">
@@ -25,7 +25,7 @@
 					<div class="card">
 						<div class="card-main">
 							<div class="card-inner">
-								<h1 class="card-heading"><i class="icon icon-lg">verified_user</i>&nbsp;登录到用户中心</h1>
+								<h1 class="card-heading"><i class="icon icon-lg">verified_user</i>&nbsp;ログイン</h1>
 							</div>
 						</div>
 					</div>
@@ -35,7 +35,7 @@
 								<div class="card-inner">
 									<p class="text-center">
 										<span class="avatar avatar-inline avatar-lg">
-											<img alt="Login" src="https://github.com/Ahref-Group/SS-Panel-smarty-Edition/raw/smarty/templates/materialize/images/users/avatar-002.jpg">
+											<img alt="Login" src="https://secure.gravatar.com/avatar/253c7d9e9039f0d2b61615ea280ecb3e?s=80&d=mm&r=g">
 										</span>
 									</p>
 									<form action="javascript:void(0);"  method="POST">
@@ -43,7 +43,7 @@
 											<div class="row">
 												<div class="col-md-10 col-md-push-1">
 													<input id="email" type="email" name="email" class="form-control" maxlength="30">
-													<label for="email" class="floating-label"><i class="icon icon-lg">send</i>&nbsp;邮箱 Email</label>
+													<label for="email" class="floating-label"><i class="icon icon-lg">send</i>&nbsp;メール Email</label>
 												</div>
 											</div>
 										</div>
@@ -51,7 +51,7 @@
 											<div class="row">
 												<div class="col-md-10 col-md-push-1">
 													<input id="password" type="password" name="password" class="form-control">
-													<label for="password" class="floating-label"><i class="icon icon-lg">visibility_off</i>&nbsp;密码 Password</label>
+													<label for="password" class="floating-label"><i class="icon icon-lg">visibility_off</i>&nbsp;パスワード Password</label>
 												</div>
 											</div>
 										</div>
@@ -61,7 +61,7 @@
 													<div class="checkbox checkbox-adv">
 														<div id="assp"></div>
 														<label for="remember_me">
-															<input class="access-hide" value="week" id="remember_me" name="remember_me" type="checkbox"><i class="icon icon-lg">done_all</i>&nbsp;记住我
+															<input class="access-hide" value="week" id="remember_me" name="remember_me" type="checkbox"><i class="icon icon-lg">done_all</i>&nbsp;Cookies
 															<span class="checkbox-circle"></span><span class="checkbox-circle-check"></span><span class="checkbox-circle-icon icon">done</span>
 														</label>
 													</div>
@@ -71,7 +71,7 @@
 										<div class="form-group">
 											<div class="row">
 												<div class="col-md-10 col-md-push-1">
-													<button id="login" type="submit" class="btn btn-block btn-brand waves-attach waves-light"><i class="icon icon-lg">vpn_key</i>&nbsp;登录</button>
+													<button id="login" type="submit" class="btn btn-block btn-brand waves-attach waves-light"><i class="icon icon-lg">vpn_key</i>&nbsp;ログイン</button>
 												</div>
 											</div>
 										</div>
@@ -80,8 +80,8 @@
 							</div>
 						</div>
 						<div class="clearfix">
-							<p class="margin-no-top pull-left"><a class="btn btn-flat btn-brand waves-attach" href="resetpwd.php">忘记密码？</a></p>
-							<p class="margin-no-top pull-right"><a class="btn btn-flat btn-brand waves-attach" href="register.php">注册账户</a></p>
+							<p class="margin-no-top pull-left"><a class="btn btn-flat btn-brand waves-attach" href="resetpwd.php">パスワードを忘れます</a></p>
+							<p class="margin-no-top pull-right"><a class="btn btn-flat btn-brand waves-attach" href="register.php">アカウントを作成</a></p>
 						</div>
 					</section>
 				</section>
@@ -139,7 +139,7 @@
                     }
                 },
                 error:function(jqXHR){
-                    $("#msg-error-p").html("发生错误："+jqXHR.status);
+                    $("#msg-error-p").html("エーラ："+jqXHR.status);
                     $("#loading").hide();
                     // 在控制台输出错误信息
                     console.log(removeHTMLTag(jqXHR.responseText));
@@ -154,32 +154,32 @@
                 var msg_id=0,msgcss="error";
                 if($("#email").val().length==0){
                     id_name="#email";
-                    $("#msg").html("请输入邮箱");
+                    $("#msg").html("メールを入力してください");
                     msg_id=1;
                     return false;
                 }
                 var email_reg = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
                 if(!email_reg.test($("#email").val())) {
                     id_name="#email";
-                    $("#msg").html("请输入有效的邮箱！");
+                    $("#msg").html("有効なメールを入力してください！");
                     msg_id=1;
                     return false;
                 }
                 if($("#password").val().length==0){
                     id_name="#password";
-                    $("#msg").html("请输入密码");
+                    $("#msg").html("パスワードを入力してください！");
                     msg_id=1;
                     return false;
                 }
-                if($("#msg-success-p").eq(0)[0].innerHTML=="登录成功！欢迎您"|| $("#msg-success-p").eq(0)[0].innerHTML=="你已成功登录！"){
-                    msg_out("你已成功登录！","success");
+                if($("#msg-success-p").eq(0)[0].innerHTML=="ようこそ"|| $("#msg-success-p").eq(0)[0].innerHTML=="ようこそ！"){
+                    msg_out("ようこそ！","success");
                     msg_id=1;
                     $("#msg-error-p").html(null);
                 }
-                if($("#msg-error-p").eq(0)[0].innerHTML=="邮箱或者密码错误"|| $("#msg-error-p").eq(0)[0].innerHTML=="邮箱或者密码错误，请重新输入！"){
+                if($("#msg-error-p").eq(0)[0].innerHTML=="対応するアカウントがありません。"|| $("#msg-error-p").eq(0)[0].innerHTML=="対応するアカウントがありません。"){
                     if($("#password").val()==inpasswd && $("#email").val()==inemail){
                         id_name="#password";
-                        msg_out("邮箱或者密码错误，请重新输入！","error");
+                        msg_out("対応するアカウントがありません。","error");
                         msg_id=1;
                         return false;
                     }

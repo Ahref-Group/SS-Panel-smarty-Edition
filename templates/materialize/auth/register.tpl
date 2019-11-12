@@ -5,7 +5,7 @@
 <meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
 <meta name="theme-color" content="#293696">
 <{include file='source.tpl'}>
-<title>注册 - <{$site_name}></title>
+<title>アカウントを作成 - <{$site_name}></title>
 <{include file='header.tpl'}>
 <script type="text/javascript">
     function agree_yes(){
@@ -35,7 +35,7 @@
 				<div class="card">
 					<div class="card-main">
 						<div class="card-inner">
-                                			<h1 class="card-heading"><i class="icon icon-lg">verified_user</i>&nbsp;注册<{$site_name}></h1>
+                                			<h1 class="card-heading"><i class="icon icon-lg">verified_user</i>&nbsp;アカウントを作成</h1>
 						</div>
 					</div>
 				</div><!--card-->
@@ -48,7 +48,7 @@
 										<div class="row">
                                                 					<div class="col-md-10 col-md-push-1">
                                                     						<input id="name" type="text" name="name" class="form-control" maxlength="16">
-                                                    						<label for="name" class="floating-label"><i class="icon icon-lg">person</i>&nbsp;名字 UserName</label>
+                                                    						<label for="name" class="floating-label"><i class="icon icon-lg">person</i>&nbsp;名前 UserName</label>
                                                 					</div>
                                             					</div>
                                         				</div>
@@ -56,7 +56,7 @@
 										<div class="row">
                                                 					<div class="col-md-10 col-md-push-1">
 												<input id="email" type="email" name="email" class="form-control" maxlength="30">
-												<label for="email"  class="floating-label"><i class="icon icon-lg">send</i>&nbsp;邮箱 Email</label>
+												<label for="email"  class="floating-label"><i class="icon icon-lg">send</i>&nbsp;メール Email</label>
 											</div>
 										</div>
 									</div>
@@ -64,7 +64,7 @@
 										<div class="row">
 											<div class="col-md-10 col-md-push-1">
 												<input id="password" type="password" name="password" class="form-control" maxlength="18">
-												<label for="password"  class="floating-label"><i class="icon icon-lg">visibility_off</i>&nbsp;密码 PassWord</label>
+												<label for="password"  class="floating-label"><i class="icon icon-lg">visibility_off</i>&nbsp;パスワード PassWord</label>
 											</div>
 										</div>
 									</div>
@@ -72,7 +72,7 @@
 										<div class="row">
 											<div class="col-md-10 col-md-push-1">
 												<input id="repassword" type="password" name="repassword" class="form-control" maxlength="18">
-												<label for="repassword"  class="floating-label"><i class="icon icon-lg">redo</i>&nbsp;再次输入密码 RePassWord</label>
+												<label for="repassword"  class="floating-label"><i class="icon icon-lg">redo</i>&nbsp;もう一回 RePassWord</label>
 											</div>
 										</div>
 									</div>
@@ -80,7 +80,7 @@
 										<div class="row">
 											<div class="col-md-10 col-md-push-1">
 												<input id="code" type="text" name="code" class="form-control" maxlength="50">
-												<label for="code"  class="floating-label"><i class="icon icon-lg">pets</i>&nbsp;邀请码 Code</label>
+												<label for="code"  class="floating-label"><i class="icon icon-lg">pets</i>&nbsp;招待コード Code</label>
 											</div>
 										</div>
 									</div>
@@ -89,7 +89,7 @@
 											<div class="col-md-10 col-md-push-1">
 												<div class="checkbox checkbox-adv">
 													<label for="agree">
-														<input class="access-hide" id="agree" name="agree" type="checkbox" onclick="$('#tos').modal();"><i class="icon icon-lg">pan_tool</i>&nbsp;同意用户协议
+														<input class="access-hide" id="agree" name="agree" type="checkbox" onclick="$('#tos').modal();"><i class="icon icon-lg">pan_tool</i>&nbsp;利用规约
 														<span class="checkbox-circle"></span><span class="checkbox-circle-check"></span><span class="checkbox-circle-icon icon">done</span>
 													</label>
 												</div>
@@ -99,7 +99,7 @@
 									<div class="form-group">
 									        <div class="row">
 											<div class="col-md-10 col-md-push-1">
-												<button class="btn btn-block btn-brand waves-attach waves-light" data-toggle="modal" id="registrace"><i class="icon icon-lg">flight</i>&nbsp;注册</button>
+												<button class="btn btn-block btn-brand waves-attach waves-light" data-toggle="modal" id="registrace"><i class="icon icon-lg">flight</i>&nbsp;作成</button>
 											</div>
 										</div>
 									</div>
@@ -128,13 +128,13 @@
 			<div class="modal-content">
 				<div class="text-center">
 					<div class="modal-heading">
-						<p class="modal-title"><{$site_name}>用户协议<small>Terms of Service</small></p>
+						<p class="modal-title"><{$site_name}>利用规约<small>Terms of Service</small></p>
 					</div>
 				<div class="modal-inner">
 					<p class="h5 margin-top-sm text-black-hint"><{$tos_content}></p>
 				</div>
 				<div class="modal-footer">
-					<p class="text-right"><a class="btn btn-flat btn-brand-accent waves-attach" data-dismiss="modal" onclick="agree_no()">窝不服！</a><a class="btn btn-flat btn-brand-accent waves-attach" data-dismiss="modal" onclick="agree_yes()">窝滋瓷！</a></p>
+					<p class="text-right"><a class="btn btn-flat btn-brand-accent waves-attach" data-dismiss="modal" onclick="agree_no()">拒否する</a><a class="btn btn-flat btn-brand-accent waves-attach" data-dismiss="modal" onclick="agree_yes()">同意する</a></p>
 				</div>
 			</div>
 		</div>
@@ -186,7 +186,7 @@
                             }
                     },
                     error:function(jqXHR){
-                        $("#msg").html("发生错误："+jqXHR.status);
+                        $("#msg").html("エラー："+jqXHR.status);
                         $("#result").modal();
                         $("#loading").hide();
                         // 在控制台输出错误信息
@@ -201,7 +201,7 @@
                         id_name="#name";
                         $("#result").modal();
                         $("#loading").hide();
-                        $("#msg").html("吃货，用户名呢！");
+                        $("#msg").html("君の名は？");
                         msg_id=1;
                         return false;
                     }
@@ -209,7 +209,7 @@
                         id_name="#name";
                         $("#result").modal();
                         $("#loading").hide();
-                        $("#msg").html("麻麻说名字长越长人越厉害哦~");
+                        $("#msg").html("長い");
                         msg_id=1;
                         return false;
                     }
@@ -217,7 +217,7 @@
                         id_name="#email";
                         $("#result").modal();
                         $("#loading").hide();
-                        $("#msg").html("喂喂喂，邮箱呢！");
+                        $("#msg").html("メールは？");
                         msg_id=1;
                         return false;
                     }
@@ -226,7 +226,7 @@
                         id_name="#email";
                         $("#result").modal();
                         $("#loading").hide();
-                        $("#msg").html("吃货！这不是邮箱！");
+                        $("#msg").html("これはメールじゃない");
                         msg_id=1;
                         return false;
                     }
@@ -234,7 +234,7 @@
                         id_name="#password";
                         $("#result").modal();
                         $("#loading").hide();
-                        $("#msg").html("啊啊啊！密码呢！");
+                        $("#msg").html("パスワードは？");
                         msg_id=1;
                         return false;
                     }
@@ -242,7 +242,7 @@
                         id_name="#password";
                         $("#result").modal();
                         $("#loading").hide();
-                        $("#msg").html("嗨，密码长一点能忘啊！");
+                        $("#msg").html("パスワードはちょっと長いです");
                         msg_id=1;
                         return false;
                     }
@@ -250,7 +250,7 @@
                         id_name="#repassword";
                         $("#result").modal();
                         $("#loading").hide();
-                        $("#msg").html("重复输一遍密码啊喂");
+                        $("#msg").html("もう一回");
                         msg_id=1;
                         return false;
                     }
@@ -258,7 +258,7 @@
                         id_name="#repassword";
                         $("#result").modal();
                         $("#loading").hide();
-                        $("#msg").html("吃货！两次密码不一样");
+                        $("#msg").html("パスワードは異になります");
                         msg_id=1;
                         return false;
                     }
@@ -266,22 +266,22 @@
                         id_name="#code";
                         $("#result").modal();
                         $("#loading").hide();
-                        $("#msg").html("哼！我要看邀请码！");
+                        $("#msg").html("招待コードは？");
                         msg_id=1;
                         return false;
                     }
                     if($("#msg-success-p").eq(0)[0].innerHTML=="注册成功"){
-                        msg_out("欢迎加入PrSS","success");
+                        msg_out("ようこそ","success");
                         $("#loading").hide();
                         msg_id=1;
                         $("#msg-error-p").html(null);
                     }
-                    if($("#msg-error-p").eq(0)[0].innerHTML=="邀请码无效"|| $("#msg-error-p").eq(0)[0].innerHTML=="邀请码无效，请重新输入！"){
+                    if($("#msg-error-p").eq(0)[0].innerHTML=="招待コードは無效です"|| $("#msg-error-p").eq(0)[0].innerHTML=="邀请码无效，请重新输入！"){
                         $("#loading").hide();
                         if($("#code").val()==incode){
                             id_name="#code";
                             $("#loading").hide();
-                            msg_out("邀请码无效，请重新输入！","error");
+                            msg_out("招待コードは無效です","error");
                             msg_id=1;
                             return false;
                         }

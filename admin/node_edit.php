@@ -22,7 +22,7 @@ if(!empty($_POST)){
     }
     echo json_encode($ue,JSON_UNESCAPED_UNICODE);
 }else{
-
+  
 if(!empty($_GET)){
     //获取id
     $id = $_GET['id'];

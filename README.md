@@ -1,15 +1,7 @@
 A simple front-end of [Shadowsocks manyuser](https://github.com/breakwa11/shadowsocks/tree/manyuser).
 This Version is based on xuanhuan's [SS-Panel-smarty](https://github.com/xuanhuan/ss-panel).
 
-2019年6月1日：由于Bug满天飞的缘故，已经懒得pull到Github上了。
-
-已修复大多数Bug，打个包给你们，想用的话请直接从这里下载，3Q！
-
-[Google云端硬盘](https://drive.google.com/file/d/1fj2HB8_yKDl2iPE55ZNpHTNjY0-zG1Sn)
-
-If there is no serious Bug, then this version will not continue to update the.
-
-2017年11月11日：如果没有严重的Bug的话，那么这个版本应该不会再继续更新了。
+*最后更新于2019年11月12日，该更新完整实现用户自定义SSR的协议与混淆。
 
 Great thanks to [kot4ri](https://zankyo.cc/) xiaoxin and others for their help with fixing bugs and updating functions.
 
@@ -34,13 +26,13 @@ Please make sure that `/lib/Ss` has the permission to read & write. If not, plea
 Please rename the`/tools`, or you may be reset to another malicious.<br/>
 请重命名`/tools`，否则可能被他人恶意重置流量。
 
-Add SSR support,It can now be confused with manyuser protocol/obfs/method.Function has been implemented, but has not yet done UI, you can only modify configuration in the management background.The default configuration is auth_chain_a/tls1.2_ticket_auth/none.<br/>
-添加了SSR支持，现在可以使用多用户多协议混淆和加密了。功能已经实现，但还没有做UI，只能在后台管理修改配置。默认配置是auth_chain_a/tls1.2_ticket_auth/none
+Add SSR support,It can now be confused with manyuser protocol/obfs/method.Function has been implemented.The default configuration is auth_chain_a/tls1.2_ticket_auth/none.<br/>
+添加了SSR支持，现在可以使用多用户多协议混淆和加密了。功能已经完整实现。默认配置是auth_chain_a/tls1.2_ticket_auth/none
 *请务必将服务端下的apiconfig.py中API_INTERFACE修改为legendsockssr。
-*欢迎dalao来帮忙完善user的UI。
+
 
 when the node is added if the agreement and confusion for the original or not, then the output SS QRCode. <br/>
-添加节点时若协议和混淆为原版或不填写，则输出SS二维码。*该功能可能已经失效，请知情人士提供SSR链接格式。
+添加节点时若协议和混淆为原版或不填写，则输出SS二维码。
 
 ========
 ### AdminSystem 

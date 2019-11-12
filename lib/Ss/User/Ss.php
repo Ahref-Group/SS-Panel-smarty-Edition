@@ -152,7 +152,31 @@ class Ss {
             "uid" => $this->uid
         ]);
     }
-
+    
+    //update method
+    function update_method($method){
+        $this->db->update("user",[
+            "method" => $method
+        ],[
+            "uid" => $this->uid
+        ]);
+    }
+    //update protocol
+    function update_protocol($protocol){
+        $this->db->update("user",[
+            "protocol" => $protocol
+        ],[
+            "uid" => $this->uid
+        ]);
+    }
+    //update obfs
+    function update_obfs($obfs){
+        $this->db->update("user",[
+            "obfs" => $obfs
+        ],[
+            "uid" => $this->uid
+        ]);
+    }
     //user info array
     function getUserArray(){
         $datas = $this->db->select("user","*",[

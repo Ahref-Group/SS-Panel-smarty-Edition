@@ -60,7 +60,7 @@ function get_ss_url($id){
         }
 		
 //具体格式: ssr://base64(host:port:protocol:method:obfs:base64pass/?obfsparam=base64param&protoparam=base64param&remarks=base64remarks&group=base64group&udpport=0&uot=0)
-       $ssurl = $server.":".$port.":".$protocol.":".$method.":".$obfs.":".base64_url_encode($pass)."/?obfsparam=".base64_url_encode($parameter)."&protoparam=".base64_url_encode($protoparam)."&remarks=".base64_url_encode($name)."&group=".base64_url_encode('Groupname');
+       $ssurl = $server.":".$port.":".$protocol.":".$method.":".$obfs.":".base64_url_encode($pass)."/?obfsparam=".base64_url_encode($parameter)."&protoparam=".base64_url_encode($protoparam)."&remarks=".base64_url_encode($name)."&group=".base64_url_encode('KTKK');
 
     	return "ssr://".base64_url_encode($ssurl);
 

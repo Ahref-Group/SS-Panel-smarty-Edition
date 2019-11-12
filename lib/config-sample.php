@@ -128,5 +128,5 @@ require_once 'do.php';
 //在smarty全局传递$site_name，$site_url，$version，$Runtime。
 $smarty->assign('site_name',$site_name);
 $smarty->assign('site_url',$site_url);
-$smarty->assign('version',$version." + smarty-Edition");
+$smarty->assign('version',$version." + smarty Edition Mod(20191112)");
 $smarty->assign('Runtime',$Runtime);

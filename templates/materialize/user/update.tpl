@@ -62,6 +62,40 @@
 						</div>
 					</div>
 				</div>
+				<div class="col-lg-6 col-sm-6">
+					<div class="card">
+						<div class="card-main">
+							<div class="card-inner">
+								<p class="card-heading">修改协议与混淆</p>
+								<div class="form-group form-group-label">
+									<label class="floating-label" for="method">算法</label>
+									<select class="form-control" id="method">
+										<option value="null">请选择</option>
+										<option value="none">none</option>
+									</select>
+								</div>
+								<div class="form-group form-group-label">
+									<label class="floating-label" for="protocol">协议</label>
+									<select class="form-control" id="protocol">
+										<option value="null">请选择</option>
+										<option value="auth_chain_a">auth_chain_a</option>
+										<option value="auth_chain_d">auth_chain_d</option>
+										<option value="auth_chain_f">auth_chain_f</option>
+									</select>
+								</div>
+								<div class="form-group form-group-label">
+									<label class="floating-label" for="obfs">混淆</label>
+									<select class="form-control" id="obfs">
+										<option value="null">请选择</option>
+										<option value="tls1.2_ticket_auth">tls1.2_ticket_auth</option>
+										<option value="plain">plain</option>
+									</select>
+								</div>
+								<a href="#updateobfs" data-toggle="modal" class="btn btn-block btn-brand-accent waves-attach waves-light">保存配置</a>
+							</div>
+						</div>
+					</div>
+				</div>
 			</section>
 		</div>
 	</main>
@@ -91,7 +125,22 @@
 				<p class="h5 margin-top-sm text-black-hint">确认修改<{$site_name}>的所有节点连接密码？</p>
 			</div>
 			<div class="modal-footer">
-				<p class="text-right"><a class="btn btn-flat btn-brand-accent waves-attach" data-dismiss="modal">放弃</a><a class="btn btn-flat btn-brand-accent waves-attach" data-dismiss="modal" id="ss-pwd-update" type="submit">我确认</a></p>
+				<p class="text-right"><a class="btn btn-flat btn-brand-accent waves-attach" data-dismiss="modal">放弃</a><a class="btn btn-flat btn-brand-accent waves-attach" data-dismiss="modal" id="ss-pwd-update" type="submit">确认</a></p>
+			</div>
+		</div>
+	</div>
+</div>
+<div aria-hidden="true" class="modal modal-va-middle fade" id="updateobfs" role="dialog" tabindex="-1">
+	<div class="modal-dialog modal-xs">
+		<div class="modal-content">
+		    <div class="modal-heading">
+				<p class="modal-title">修改协议与混淆</p>
+			</div>
+			<div class="modal-inner">
+				<p class="h5 margin-top-sm text-black-hint">确认保存配置吗？</p>
+			</div>
+			<div class="modal-footer">
+				<p class="text-right"><a class="btn btn-flat btn-brand-accent waves-attach" data-dismiss="modal">放弃</a><a class="btn btn-flat btn-brand-accent waves-attach" data-dismiss="modal" id="ss-obfs-update" type="submit">我确认</a></p>
 			</div>
 		</div>
 	</div>
@@ -185,6 +234,80 @@
                 dataType:"json",
                 data:{
                     sspwd: Aes.Ctr.encrypt($("#sspwd").val(), "<{$randomChar}>", 256)
+                },
+                success:function(data){
+                    if(data.ok){
+                        $("#result").modal();
+                        $("#msg").html(data.msg);
+                    }else{
+                        $("#result").modal();
+                        $("#msg").html(data.msg);
+                    }
+                },
+                error:function(jqXHR){
+                        $("#msg").html("发生错误："+jqXHR.status);
+                        $("#result").modal();
+                        // 在控制台输出错误信息
+                        console.log(removeHTMLTag(jqXHR.responseText));
+                }
+            })
+        })
+    })
+</script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#ss-obfs-update").click(function(){
+            $("#updatepwd").hide();
+            function msg_out(msgout,msgcss){
+                $("#result").modal();
+                $("#msg").html(msgout);
+            }
+            if($("#method").val()=="null"){
+                $("#result").modal();
+                $("#msg").html("请选择算法")
+                msg_id=1;
+                return false;
+            }
+            if($("#protocol").val()=="null"){
+                $("#result").modal();
+                $("#msg").html("请选择协议")
+                msg_id=1;
+                return false;
+            }
+            if($("#obfs").val()=="null"){
+                $("#result").modal();
+                $("#msg").html("请选择混淆")
+                msg_id=1;
+                return false;
+            }
+            
+			if($("#method").val()!=="none"){
+                $("#result").modal();
+                $("#msg").html("算法是非法参数，请勿尝试挑战服务器。")
+                msg_id=1;
+                return false;
+            }
+            if($("#protocol").val()!=="auth_chain_a" && $("#protocol").val()!=="auth_chain_d" && $("#protocol").val()!=="auth_chain_f"){
+                $("#result").modal();
+                $("#msg").html("协议是非法参数，请勿尝试挑战服务器。")
+                msg_id=1;
+                return false;
+            }
+            if($("#obfs").val()!=="tls1.2_ticket_auth" && $("#obfs").val()!=="plain"){
+                $("#result").modal();
+                $("#msg").html("混淆是非法参数，请勿尝试挑战服务器。")
+                msg_id=1;
+                return false;
+            }
+
+           $.ajax({
+                type:"POST",
+                url:"_obfs_update.php",
+                dataType:"json",
+                data:{
+                    method: Aes.Ctr.encrypt($("#method").val(), "<{$randomChar}>", 256),
+                    protocol: Aes.Ctr.encrypt($("#protocol").val(), "<{$randomChar}>", 256),
+                    obfs: Aes.Ctr.encrypt($("#obfs").val(), "<{$randomChar}>", 256)
                 },
                 success:function(data){
                     if(data.ok){

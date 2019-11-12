@@ -20,6 +20,6 @@ if($oo->get_enable()){
     $a['msg'] = "新密码为：".$pwd;
 }else{
     $a['code'] = '0';
-    $a['msg']  = "你的SS服务已被停止，无法修改Shadowsocks连接密码。";
+    $a['msg']  = "你的服务已被停止，无法修改Shadowsocks连接密码。";
 }
 echo json_encode($a,JSON_UNESCAPED_UNICODE);

@@ -50,15 +50,15 @@
 											<input class="form-control" id="user_passwd" type="text" value="<{$rs['passwd']}>">
 										</div>
 										<div class="form-group form-group-label">
-											<label class="floating-label" for="user_passwd">协议</label>
+											<label class="floating-label" for="user_protocol">协议</label>
 											<input class="form-control" id="user_protocol" type="text" value="<{$rs['protocol']}>">
 										</div>
 										<div class="form-group form-group-label">
-											<label class="floating-label" for="user_passwd">混淆</label>
+											<label class="floating-label" for="user_obfs">混淆</label>
 											<input class="form-control" id="user_obfs" type="text" value="<{$rs['obfs']}>">
 										</div>
 										<div class="form-group form-group-label">
-											<label class="floating-label" for="user_passwd">加密</label>
+											<label class="floating-label" for="user_method">加密</label>
 											<input class="form-control" id="user_method" type="text" value="<{$rs['method']}>">
 										</div>
 									</div>
